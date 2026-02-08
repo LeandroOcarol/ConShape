@@ -31,7 +31,8 @@ namespace ShapeCon
             "\nNo. of Side: " + this.NoSide +
             "\nLength of one side: " + this.Length +
             "\nWidth of one side: " + this.Width +
-            "\nArea of a Shape: " + this.ComputeArea();
+            "\nArea of a Shape: " + this.ComputeArea() +
+            "\n";
         }
 
         public override double ComputeArea()

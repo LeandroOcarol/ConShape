@@ -29,9 +29,9 @@ namespace ShapeCon
 
             return "\nName: " + base.Name +
                 "\nColor: " + base.Color +
-                "\nNo. of Sides: " + base.NoSide +
                 "\nRadius: " + this.Radius +
-                "\nArea of the Square: " + this.ComputeArea();
+                "\nArea of the Square: " + this.ComputeArea() +
+                "\n";
         }
 
         public override double ComputeArea() {

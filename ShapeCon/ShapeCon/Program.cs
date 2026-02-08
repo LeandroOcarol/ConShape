@@ -11,42 +11,71 @@ namespace ShapeCon
     { 
         static void Main(string[] args) { 
 
-            Shape sh = new Square();
+            Shape sh = new Square();       
             
-            Console.Write("Enter Name: ");
-            sh.Name = Console.ReadLine();
-            Console.Write("Enter Color: ");
-            sh.Color = Console.ReadLine();
-            Console.Write("Enter No. of Sides: ");
-            sh.NoSide = int.Parse(Console.ReadLine());
-            Console.WriteLine(sh);
-            Console.Write("Enter side Length: ");
-            ((Square)sh).SideLength = double.Parse(Console.ReadLine());
-            Console.WriteLine(sh);
+            while(true)
+            {
+                Console.WriteLine("\nChoose what kind of shape do you want: ");
+                Console.WriteLine("1. Square");
+                Console.WriteLine("2. Rectangle");
+                Console.WriteLine("3. Circle");
+                Console.WriteLine("4. Exit");
+                Console.Write("Enter your choice: ");
+                int choice = int.Parse(Console.ReadLine());
+                Console.Write("\n");
+                
+                switch(choice)
+                {
+                    case 1:
+                    Console.Write("Enter Name: ");
+                    sh.Name = Console.ReadLine();
+                    Console.Write("Enter Color: ");
+                    sh.Color = Console.ReadLine();
+                    Console.Write("Enter No. of Sides: ");
+                    sh.NoSide = int.Parse(Console.ReadLine());
+                    Console.Write("Enter side Length: ");
+                    ((Square)sh).SideLength = double.Parse(Console.ReadLine());
+                    Console.Write("\nResult");
+                    Console.WriteLine(sh);
+                    break;
 
-            sh = new Rectangle();
-            Console.Write("Enter Name: ");
-            sh.Name = Console.ReadLine();
-            Console.Write("Enter Color: ");
-            sh.Color = Console.ReadLine();
-            Console.Write("Enter No. of Sides: ");
-            sh.NoSide = int.Parse(Console.ReadLine());
-            Console.Write("Enter  Length: ");
-            ((Rectangle)sh).Length = double.Parse(Console.ReadLine());
-            Console.Write("Enter  Width: ");
-            ((Rectangle)sh).Width = double.Parse(Console.ReadLine());
-            Console.WriteLine(sh);
+                    case 2:
+                    sh = new Rectangle();
+                    Console.Write("Enter Name: ");
+                    sh.Name = Console.ReadLine();
+                    Console.Write("Enter Color: ");
+                    sh.Color = Console.ReadLine();
+                    Console.Write("Enter No. of Sides: ");
+                    sh.NoSide = int.Parse(Console.ReadLine());
+                    Console.Write("Enter  Length: ");
+                    ((Rectangle)sh).Length = double.Parse(Console.ReadLine());
+                    Console.Write("Enter  Width: ");
+                    ((Rectangle)sh).Width = double.Parse(Console.ReadLine());
+                    Console.Write("\nResult");
+                    Console.WriteLine(sh);
+                    break;
 
-            sh = new Circle();
-            Console.Write("Enter Name: ");
-            sh.Name = Console.ReadLine();
-            Console.Write("Enter Color: ");
-            sh.Color = Console.ReadLine();
-            Console.Write("Enter No. of Sides: ");
-            sh.NoSide = int.Parse(Console.ReadLine());
-            Console.Write("Enter  Radius: ");
-            ((Circle)sh).Radius = double.Parse(Console.ReadLine());
-            
+                    case 3:
+                    sh = new Circle();
+                    Console.Write("Enter Name: ");
+                    sh.Name = Console.ReadLine();
+                    Console.Write("Enter Color: ");
+                    sh.Color = Console.ReadLine();
+                    Console.Write("Enter  Radius: ");
+                    ((Circle)sh).Radius = double.Parse(Console.ReadLine());
+                    Console.Write("\nResult");
+                    Console.WriteLine(sh);
+                    break;
+
+                    case 4:
+                    Console.Write("Babye.");
+                    return;
+
+                    default:
+                    Console.Write("Invalid Choice.");
+                    break;
+                }
+            }
         }
     }
 }

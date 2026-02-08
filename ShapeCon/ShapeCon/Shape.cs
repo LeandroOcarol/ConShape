@@ -32,7 +32,8 @@ namespace ShapeCon
             return "\nName: " + this.Name +
                 "\nColor: " + this.Color +
                 "\nNo. of Side: " + this.NoSide +
-                "\nArea of a Shape: " + this.ComputeArea;
+                "\nArea of a Shape: " + this.ComputeArea +
+                "\n";
         }
 
         public virtual double ComputeArea()
